@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get 'discovery', action: :index, controller: 'discovery'
-  resources :vendors, :products, :ownerships
+  resources :vendors, :products, :ownerships, :tags
   
-  root :to => redirect('/vendors')
+  namespace :admin do 
+  	resources :products, :vendors, :tags
+  end
+  
+  root :to => redirect('/discovery')
 end

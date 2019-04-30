@@ -17,25 +17,37 @@ module NavigationHelpers
       '/'
 
     when /^the new vendor page$/
-      new_vendor_path
+      new_admin_vendor_path
 
-    when /^the vendors page$/
-      vendors_path
+    when /^the volunteer-facing vendors index page$/
+      admin_vendors_path
 
     when /^the edit vendor page$/
-      edit_vendor_path(1)
+      edit_admin_vendor_path(1)
 
     when /^the new product page$/
-      new_product_path
+      new_admin_product_path
 
-    when /^the products page$/
-      products_path
+    when /^the volunteer-facing products index page$/
+      admin_products_path
+    when /^the volunteer-facing tags page$/
+      admin_tags_path
 
     when /^the edit product page$/
-      edit_product_path(1)
+      edit_admin_product_path(1)
 
     when /^the Discovery page$/
       discovery_path
+
+    when /^the customer-facing products index page$/
+      products_path
+    when /^the customer-facing vendors index page$/
+      vendors_path
+    when /^the product detail page$/
+      product_path(1)
+
+    when /^the vendor detail page$/
+      vendor_path(1)
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

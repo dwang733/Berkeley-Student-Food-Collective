@@ -76,7 +76,7 @@ Feature: Add a new product to the database
   Scenario: Fill new product form, press cancel, and confirm (happy)
     When I press "Cancel"
     And I confirm the popup
-    Then I should be on the products page
+    Then I should be on the volunteer-facing products index page
     And I should not see a success or error message
 
   @javascript
@@ -92,3 +92,4 @@ Feature: Add a new product to the database
     And I submit the form
     Then I should see an error message on the new product page
     And I should see the product attributes, except "picture", filled in
+    And no products should exist
