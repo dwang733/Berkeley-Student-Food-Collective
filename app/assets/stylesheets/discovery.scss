@@ -41,9 +41,8 @@
   overflow: -moz-scrollbars-none;
   border: none;
   margin-bottom: 12vh;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  scrollbar-width: none
+  scrollbar-width: none;
+  width: 100vw;
 }
 
 .carousel::-webkit-scrollbar {
@@ -59,8 +58,8 @@
   margin-bottom: 4.5vh;
 }
 
-.carousel_element {
-  transition: 0.5s transform;
+#carousel_item {
+  max-width: 500px;
 }
 
 .carousel_image {
@@ -78,33 +77,36 @@
   border: 5px solid white;
 }
 
-.spreadLeft {
-  transform: translate3d(-30px, 0px, 0px);
-  opacity: 0.5;
+#carousel_element_text {
+
 }
 
-.spreadRight {
-  transform:translate3d(30px, 0px, 0px);
-  opacity: 0.5;
+#element_name {
+
 }
 
-.shade {
-  opacity: 0%;
+#learnmore {
+
 }
 
-.discovery-centered {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 180px;
-  max-height: 180px;
-  word-wrap: break-word;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+// .spreadLeft {
+//   transform: translate3d(-30px, 0px, 0px);
+// }
+//
+// .spreadRight {
+//   transform:translate3d(30px, 0px, 0px);
+// }
+
+// .discovery-centered {
+//   position: absolute;
+//   top: 110%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   word-wrap: break-word;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }
 
 .carousel_parallax {
   background-color: white;
@@ -116,8 +118,7 @@
   position: relative;
   color: #efefef;
   text-align: center;
-  text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
-  font-size: 20pt;
+  font-size: 2vw;
   font-family: 'Arvo', sans-serif;
   font-weight: 400;
   display: inline-block;
@@ -126,22 +127,22 @@
   overflow: hidden;
 }
 
-.overlay {
-  position: absolute;
-  top: 80%;
-  left: 10%;
-  width: 80%;
-  height: 95%;
-  opacity: 0;
-  font-size: 10pt;
-  touch-action: none;
-  transition: opacity 1s;
-  word-wrap: break-word;
-  white-space: normal;
-  overflow: hidden;
-}
-
-.container:hover .overlay {
-  opacity: 1;
-  touch-action: auto;
-}
+// .overlay {
+//   position: absolute;
+//   top: 80%;
+//   left: 10%;
+//   width: 80%;
+//   height: 95%;
+//   opacity: 0;
+//   font-size: 10pt;
+//   touch-action: none;
+//   transition: opacity 1s;
+//   word-wrap: break-word;
+//   white-space: normal;
+//   overflow: hidden;
+// }
+//
+// .container:hover .overlay {
+//   opacity: 1;
+//   touch-action: auto;
+// }
