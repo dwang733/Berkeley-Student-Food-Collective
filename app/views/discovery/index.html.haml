@@ -1,6 +1,19 @@
 %body
+<<<<<<< HEAD
   = render 'header', currentPage: 'discovery', admin: false
   #discovery
     - @hashes.each do |type, type_hash|
       - type_hash.each do |tag, list|
         = render 'carousel', type: type, tag: tag, list: list
+=======
+  = render partial: 'header', locals: {currentPage: "discovery", admin: false}
+  #image_header
+    %image{src: image_url('discovery_image.jpeg'), class: 'header_image'}
+    %h1.img_hdr_text STORIES FROM BSFC
+  #discovery
+    - @tags_hash.each do |tag, list|
+      = render "carousel", type: "product", tag: tag, list: list
+
+    - @ownerships_hash.each do |tag, list|
+      = render "carousel", type: "vendor", tag: tag, list: list
+>>>>>>> 327e47715e09008b3d123406b6ce6f429f543f5b

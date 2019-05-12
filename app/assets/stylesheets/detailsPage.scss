@@ -40,6 +40,24 @@
   transform: translate(-50%, -50%);
 }
 
+.vendor_name {
+  color: white;
+  font-weight: normal;
+  font-size: 5vw;
+  font-family: 'Arvo', sans-serif;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  word-wrap: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline:none;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #accents {
   display: inline-block;
   position: absolute;
