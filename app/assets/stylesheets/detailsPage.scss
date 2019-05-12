@@ -17,8 +17,8 @@
   height: 45vh;
   justify-content: center;
   text-align: center;
-  margin-left:0px;
-  margin-right:0px;
+  margin-left:auto;
+  margin-right:auto;
   word-wrap: break-word;
 }
 
@@ -29,7 +29,7 @@
   font-family: 'Arvo', sans-serif;
   background-color: Transparent;
   background-repeat:no-repeat;
-  word-wrap: none;
+  word-wrap: break-word;
   border: none;
   cursor: pointer;
   overflow: hidden;
@@ -70,7 +70,6 @@
   display: inline-flex;
   margin-top: 7.5vh;
   justify-content: center;
-  width: 100vw;
 }
 
 .tagBtns {
@@ -100,30 +99,10 @@
    max-width: none;
 }
 
-#center {
-  margin-top: 5vh;
-}
-
-#detailsPageContent {
-  display: inline-flex;
-  max-width: 1500px;
-  margin-top: 5vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  min-width: 90vw;
-}
-
-#leftSidebar {
-  margin-right: 2.5vw;
-  max-width: 25vw;
-  position: absolute;
-}
-
 #extendTags {
-  margin-top: 2vh;
-  justify-content: center;
-  text-align: center;
-  max-width: 25vw;
+  padding-left: 10px;
+  margin-top: 10px;
+  max-width: 250px;
   flex-wrap: wrap;
   display: flex;
 }
@@ -133,20 +112,6 @@
   margin-right: auto;
   align-content: center;
   text-align: center;
-}
-
-.tagHeader {
-  color: $gray-color;
-  font-weight: normal;
-  font-size: 12pt;
-  font-family: 'Arvo', sans-serif;
-  background-repeat:no-repeat;
-  background-color: Transparent;
-  border: none;
-  cursor:pointer;
-  overflow: hidden;
-  word-wrap: none;
-  display: block;
 }
 
 .tagLinks {
@@ -159,19 +124,27 @@
   border: none;
   cursor:pointer;
   overflow: hidden;
-  margin-left: 1vw;
-  margin-right: 1vw;
+  margin-left: 5px;
+  margin-right: 5px;
   word-wrap: break-word;
+  max-width: 250px;
 }
 
 .tagLinks:hover {
   text-decoration: underline;
 }
 
+#detailsPageContent {
+  display: inline-flex;
+  padding: 5px;
+  max-width: 1500px;
+  margin-top: 5px;
+}
+
 #detailsPageImage {
   border-radius: 15px;
-  max-width: 25vw;
-  height: scale;
+  max-width: 250px;
+  max-height: 262px;
 }
 
 .imageNoText {
@@ -182,7 +155,7 @@
 }
 
 .imageWithText {
-  margin-right: 2.5vw;
+  margin-right: 15px;
 }
 
 #detailsPageText {
@@ -196,8 +169,6 @@
   overflow: hidden;
   outline:none;
   word-wrap: break-word;
-  min-width: 60vh;
-  justify-content: center;
 }
 
 .detailsTextNoImage {
@@ -205,14 +176,13 @@
   margin-left: auto;
   margin-right: auto;
   align-content: center;
-  margin-top: 2.5vh;
 }
 
 .detailsTextWithImage {
-  position: absolute;
-  max-width: 60vw;
-  right: 5vw;
-  margin-left: 2.5vw;
+  min-width: 350px;
+  max-width: 500px;
+  margin-left: 15px;
+  padding-top: 5px;
 }
 
 .subhead {
@@ -243,9 +213,4 @@
   overflow: hidden;
   outline:none;
   word-wrap: break-word;
-  justify-content: center;
-  text-align: center;
-  margin-left:auto;
-  margin-right:auto;
-  margin-bottom: 5vh;
 }
