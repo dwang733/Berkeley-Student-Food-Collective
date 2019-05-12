@@ -106,9 +106,10 @@
   text-overflow: ellipsis;
 }
 
-#carousel_parallax {
+.carousel_parallax {
   background-color: white;
   width: 100vw;
+  display: none;
 }
 
 .container {

@@ -1,0 +1,29 @@
+.carousel_parallax{id: "carousel_parallax_#{item.name.downcase.gsub(' ', '_')}"}
+  - if type == 'vendor'
+    %h1.name_heading
+      = item.name
+    - if not item.mission.empty?
+      #mission
+        %h5.subhead Mission
+        %p.subtext
+          = item.mission
+    - if not item.story.empty?
+      #story
+        %h5.subhead Story
+        %p.subtext
+          = item.story
+
+  - if type == 'product'
+    %h1.name_heading
+      = item.name
+    - if not item.origin.empty?
+      #mission
+        %h5.subhead Origin
+        %p.subtext
+          = item.origin
+    - if not item.cultural_history.empty?
+      #story
+        %h5.subhead Cultural History
+        %p.subtext
+          = item.cultural_history
+  = link_to "See More Details", item_path

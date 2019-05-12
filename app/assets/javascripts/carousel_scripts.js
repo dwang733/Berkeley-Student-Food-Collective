@@ -27,8 +27,19 @@ $(document).ready(function() {
   $(".carousel_element").mouseout(function() {
     hoverHelper($(this), DOMTokenList.prototype.remove);
   });
+
+
 });
 
 function carouselAlert() {
   alert('Vendor Card - Still in Progress');
+}
+
+function showCollapsible(collapsibleID) {
+  currentDisplay = document.getElementById(collapsibleID).style.display;
+  if (currentDisplay == "") {
+    document.getElementById(collapsibleID).style.display = "block";
+  } else if (currentDisplay == "block") {
+    document.getElementById(collapsibleID).style.display = "";
+  }
 }
