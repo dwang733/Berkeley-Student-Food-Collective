@@ -53,6 +53,8 @@ function otherCollapsiblesDisappear(collapsibleID){
   collapsibles = document.getElementsByClassName("carousel_parallax");
   for (var i in collapsibles) {
     let collapsible = collapsibles.item(i);
-    collapsible.style.display = "";
+    if (collapsible.id != collapsibleID) {
+      collapsible.style.display = "";
+    }
   }
 }
