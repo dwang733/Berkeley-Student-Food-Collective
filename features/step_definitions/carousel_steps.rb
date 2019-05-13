@@ -72,6 +72,18 @@ When /I hover over the second carousel element/ do
   find('#fake_name_2').hover
 end
 
+When /I click on the second carousel element/ do 
+  find('#fake_name_2').click
+end
+
+Then /the collapsible should appear/ do
+  expect(has_selector?(id: "carousel_parallax_fake_name_2", visible: true)).to be(true)
+end
+
+Then /the collapsible should disappear/ do
+  expect(has_selector?(id: "carousel_parallax_fake_name_2", visible: true)).to be(false)
+end
+
 Then /I should see a carousel for the ownership type "(.*)"/ do |ownership_type|
   @formatted = ownership_type.downcase.gsub(' ', '_')
   expect(page).not_to have_select("##{@formatted}")

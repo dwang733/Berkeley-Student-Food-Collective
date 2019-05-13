@@ -20,6 +20,7 @@ $(document).ready(function() {
     });
   }
 
+  /*
   $(".carousel_element").mouseover(function() {
     hoverHelper($(this), DOMTokenList.prototype.add);
   });
@@ -27,6 +28,7 @@ $(document).ready(function() {
   $(".carousel_element").mouseout(function() {
     hoverHelper($(this), DOMTokenList.prototype.remove);
   });
+  */
 
 
 });
@@ -36,10 +38,21 @@ function carouselAlert() {
 }
 
 function showCollapsible(collapsibleID) {
+
+  otherCollapsiblesDisappear(collapsibleID);
+
   currentDisplay = document.getElementById(collapsibleID).style.display;
   if (currentDisplay == "") {
     document.getElementById(collapsibleID).style.display = "block";
   } else if (currentDisplay == "block") {
     document.getElementById(collapsibleID).style.display = "";
+  }
+}
+
+function otherCollapsiblesDisappear(collapsibleID){
+  collapsibles = document.getElementsByClassName("carousel_parallax");
+  for (var i in collapsibles) {
+    let collapsible = collapsibles.item(i);
+    collapsible.style.display = "";
   }
 }

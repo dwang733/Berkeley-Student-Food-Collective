@@ -8,9 +8,12 @@
         - list[0..14].each do |vendor|
           - if vendor.picture.present?
             = render 'carousel_element', type: 'vendor', item: vendor, item_path: vendor_path(vendor.id), tag_snaked: tag_snaked
+            = render 'carousel_collapsible', type: 'vendor', item: vendor, item_path: vendor_path(vendor.id)
+
 
     - if type == :product
       - if list
         - list[0..14].each do |product|
           - if product.picture.present?
             = render 'carousel_element', type: 'product', item: product, item_path: product_path(product.id), tag_snaked: tag_snaked
+            = render 'carousel_collapsible', type: 'product', item: product, item_path: product_path(product.id)
