@@ -99,6 +99,10 @@ Then /the vendor should have no tags/ do
   expect(div).not_to have_selector("input[value='#{FactoryBot.attributes_for(:original_ownership)[:name]}']")
 end
 
+Then /the vendor should have the other vendor's name/ do
+  step %{the "vendor[name]" field should contain "#{FactoryBot.attributes_for(:other_vendor)[:name]}"}
+end
+
 Then /no vendors should exist/ do
   expect(Vendor.count).to eq(0)
 end
@@ -107,5 +111,9 @@ Then /I should see the photo, mission, story, and social media of the vendor/ do
   expect(page.find("#detailsPageImage")).not_to be nil
   expect(page.find("#mission")).not_to be nil
   expect(page.find("#story")).not_to be nil
-  expect(page.find("#socialWithText")).not_to be nil
+  expect(page.find("#socialButtons")).not_to be nil
+end
+
+Then /no vendor tags should be deleted/ do
+  expect(Ownership.count).to eq(1)
 end

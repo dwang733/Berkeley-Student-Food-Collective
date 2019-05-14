@@ -1,6 +1,4 @@
 #center
-  %image#detailsPageImage.imageNoText{:src => image_url(@product.picture)}
-  #dietaryRestrictionsContentMissing
-    = render "details_dietary_restrictions"
-    #extendTags.extendContentMissing
-      = render "details_extend_tags"
+  = image_tag @product.picture, id: 'detailsPageImage', class: 'imageNoText'
+#extendTags.extendContentMissing
+  = render 'details_extend_tags'
