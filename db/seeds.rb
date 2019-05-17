@@ -34,6 +34,8 @@ Nutrition.create(name: 'High in protein')
 @fourth_vendor = Vendor.create(name: 'Fourth Vendor', picture: @vendor_picture, address: "", facebook: "", twitter: "", instagram: "", story: "", mission: "")
 @fifth_vendor = Vendor.create(name: 'Fifth Vendor', picture: @vendor_picture, address: "", facebook: "", twitter: "", instagram: "", story: "", mission: "")
 
+@default_vendor = Vendor.create(name: 'Default Vendor Name', picture: @vendor_picture, address: "", facebook: "", twitter: "", instagram: "", story: "", mission: "")
+
 @first_vendor.ownerships << @poc
 @second_vendor.ownerships << @poc
 @third_vendor.ownerships << @poc
