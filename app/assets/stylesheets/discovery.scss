@@ -2,13 +2,13 @@
 
 #image_header {
   color: white;
+  position: relative;
 }
 
 .header_image {
   background-color: $gray-image-color;
-  min-width: 100vw;
+  width: 100vw;
   height: scale;
-  width: scale;
 }
 
 .img_hdr_text {
@@ -19,7 +19,7 @@
   text-align: center;
   justify-content: center;
   position: absolute;
-  top: 65%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -30,6 +30,7 @@
   grid-template-rows: 1fr 1fr;
   background-color: $gray-image-color;
   margin-top: -3%;
+  width: 100vw;
 }
 
 .carousel {
@@ -41,8 +42,14 @@
   overflow: -moz-scrollbars-none;
   border: none;
   margin-bottom: 12vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
   scrollbar-width: none;
-  width: 100vw;
+  width: 98vw;
+}
+
+#carousel_item {
+  max-width: 500px;
 }
 
 .carousel::-webkit-scrollbar {
@@ -58,8 +65,8 @@
   margin-bottom: 4.5vh;
 }
 
-#carousel_item {
-  max-width: 500px;
+.carousel_element {
+  transition: 0.5s transform;
 }
 
 .carousel_image {
@@ -92,14 +99,9 @@
   white-space: pre-wrap;
 }
 
-#learnmore {
-  margin-top: 1vh;
-}
-
 .carousel_parallax {
   background-color: white;
   width: 100vw;
-  display: none;
 }
 
 .container {

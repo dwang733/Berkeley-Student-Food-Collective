@@ -1,12 +1,6 @@
-- complete_name = item.name + " " + tag_snaked.downcase.gsub(' ', '_')
-.carousel_element.container{class: tag_snaked, id: complete_name.downcase.gsub(' ', '_'), onclick: "showCollapsible('carousel_parallax_#{complete_name.downcase.gsub(' ', '_')}')"}
+.carousel_element.container{class: tag_snaked, id: item.name.downcase.gsub(' ', '_'), onclick: "routeToPageDirectly('#{item_path}')"}
   #carousel_image.button
     = image_tag item.picture, class: 'element_image'
   #carousel_element_text
     %p.element_name
       = item.name
-    %p.learnmore
-      = 'Click here to learn more...'
-
-
-  

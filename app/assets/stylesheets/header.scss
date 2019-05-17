@@ -11,7 +11,7 @@
   font-size: 135%;
   display: inline-block;
   min-height: 80px;
-  max-height: 10vh;
+  width: 100vw;
 }
 
 @media (min-width: 768px) {
@@ -19,7 +19,8 @@
     text-align: center;
     justify-content: center;
     float: none;
-    margin-left: -67px;
+    padding-bottom: 1vh;
+    width: 100vw;
   }
 }
 

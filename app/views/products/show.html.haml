@@ -11,11 +11,17 @@
       - @rfc[0...4].each do |tag|
         %h3.tagBtns
           = tag
+<<<<<<< HEAD
   - if (not @product.picture.empty?) and (not @product.origin.empty?) and @product.cultural_history.empty?
     = render 'details_photo_some_text'
   - if (not @product.picture.empty?) and (not @product.origin.empty?) and (not @product.cultural_history.empty?)
     = render 'details_all_content'
   - if (not @product.picture.empty?) and @product.origin.empty? and @product.cultural_history.empty?
+=======
+  - if (not @product.picture.empty?) and ((not @product.origin.empty?) or (not @product.cultural_history.empty?))
+    = render 'details_all_content'
+  - elsif (not @product.picture.empty?) and @product.origin.empty? and @product.cultural_history.empty?
+>>>>>>> 992feb652a3260c16dcaabfbe935c4ddb6fbfcd0
     = render 'details_photo_no_text'
   - if @product.picture.empty? and ((not @product.origin.empty?) or (not @product.cultural_history.empty?))
     = render 'details_text_no_photo'

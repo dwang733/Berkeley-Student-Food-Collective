@@ -4,8 +4,6 @@ Feature: View and Interact with a Carousel of Products and Vendors
   In order to discover new products in a category
   I want to see a carousel of vendors or products with the same tag on the discovery page
 
-  
-
   @javascript
   Scenario: Carousels for products should show up correctly (happy)
     Given I create 5 new products
@@ -73,4 +71,3 @@ Feature: View and Interact with a Carousel of Products and Vendors
     Given I create 5 new products
     And I am on the Discovery page
     Then I should not see a carousel for the type "Gluten Free"
-
