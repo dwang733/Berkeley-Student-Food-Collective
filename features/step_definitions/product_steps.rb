@@ -18,6 +18,7 @@ end
 
 When /I fill in the new product form( except the vendor field)?/ do |exclude_vendor|
   step %{I am on the new product page}
+  #vendor_name = FactoryBot.attributes_for(:vendor)[:name]
   vendor_name = Vendor.first.name
   product_attributes = FactoryBot.attributes_for(:product)
   unless exclude_vendor
@@ -103,13 +104,12 @@ Then /the product should be successfully updated/ do
 end
 
 Then /I should see the product attributes(, except "(.*)",)? filled in/ do |exclude|
-  @options = ['First Vendor', 'Second Vendor', 'Third Vendor', 'Fourth Vendor', 'Fifth Vendor', 'Default Vendor Name']
   product_attributes = FactoryBot.attributes_for(:product)
   if exclude
     exclude = exclude.downcase
   end
   unless exclude == 'vendor'
-    expect(page).to have_select('Select a Vendor', :options => @options,selected: FactoryBot.attributes_for(:vendor)[:name])
+    expect(page).to have_select('Select a Vendor',selected: FactoryBot.attributes_for(:vendor)[:name])
   end
   unless exclude == 'name'
     step %{the "Name" field should contain "#{product_attributes[:name]}"}
